@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
+----
+
+## Project designer in figma 
+
+https://www.figma.com/file/unhWqqtAfRCJKRhTKzAirG/Brotinhos-do-Bruno?node-id=0%3A1&t=gg7XwkQLVPQEKpx4-1
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
