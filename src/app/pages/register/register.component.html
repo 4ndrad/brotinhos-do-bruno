@@ -1,6 +1,60 @@
 <app-menu></app-menu>
 
 <div class="container_register">
- 
-  <div>nsodvnsdns</div>
+  <div class="register_alingn">
+    <div class="register">
+      <div class="register_title">
+        <app-title title="| register new studant"></app-title>
+      </div>
+      <app-field
+        type="text"
+        skin="typeText"
+        placeholder="student's full name"
+      ></app-field>
+      <app-field
+        type="text"
+        skin="typeText"
+        placeholder="mother's full name"
+      ></app-field>
+      <app-field
+        type="text"
+        skin="typeText"
+        placeholder="father's full name"
+      ></app-field>
+      <app-field
+        type="text"
+        skin="typeText"
+        placeholder="enrollment number"
+      ></app-field>
+      <div class="small_field">
+        <app-field
+          type="select"
+          skin="typeTextSmall"
+          placeholder="Age"
+        ></app-field>
+        <app-field
+          type="text"
+          skin="typeTextMedium"
+          placeholder="Course"
+        ></app-field>
+        <app-field
+          type="text"
+          skin="typeTextSmall"
+          placeholder="Period"
+        ></app-field>
+      </div>
+      <app-field type="email" skin="typeText" placeholder="email"></app-field>
+      <div class="password_field">
+        <app-field type="password" skin="typePasswordMedium" placeholder="password"></app-field>
+        <app-field type="password" skin="typePasswordMedium" placeholder="confirm password"></app-field>
+      </div>
+    </div>
+    <div class="container_button">
+      <app-button
+      class="buttonConfirm"
+      name="register"
+      >
+      </app-button>
+    </div>
+  </div>
 </div>
