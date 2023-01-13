@@ -8,6 +8,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ButtonComponent } from './components/button/button.component';
 import { TitleComponent } from './components/title/title.component';
 import { FieldComponent } from './components/field/field.component';
+import { ReturnComponent } from './components/return/return.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FieldComponent } from './components/field/field.component';
     RegisterComponent,
     ButtonComponent,
     TitleComponent,
-    FieldComponent
+    FieldComponent,
+    ReturnComponent
   ],
   imports: [
     BrowserModule,
