@@ -1,19 +1,23 @@
 <div class="container_menu">
   <div class="logo_menu">
-    <img src="../../../../../assets/logo _company.svg" alt="logo">
+    <a [routerLink]="['/']"
+      ><img src="../../../../../assets/logo _company.svg" alt="logo"
+    /></a>
   </div>
   <div class="nav_menu">
     <div class="nav_links">
       <ul>
-        <li><a [routerLink]="['/']" >Register</a></li>
-        <li><a [routerLink]="['/']" >Consult</a></li>
+        <li>
+          <a
+            [routerLink]="['/register']"
+            [routerLinkActive]="['activated']"
+            [routerLinkActiveOptions]="{exact:true}">
+          Register</a></li>
+        <li><a [routerLink]="['/']">Consult</a></li>
       </ul>
     </div>
     <div>
-      <app-button
-        name="logout"
-        class="buttonDefault"
-      ></app-button>
+      <app-button name="logout" class="buttonDefault"></app-button>
     </div>
   </div>
 </div>
