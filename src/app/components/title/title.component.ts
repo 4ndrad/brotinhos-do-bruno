@@ -11,6 +11,9 @@ export class TitleComponent implements OnInit {
   @Input()
   title:string= ""
 
+  @Input()
+  skin:string= ""
+
   constructor() { }
 
   ngOnInit() {
