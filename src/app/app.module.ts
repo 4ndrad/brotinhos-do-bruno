@@ -10,6 +10,7 @@ import { TitleComponent } from './components/title/title.component';
 import { FieldComponent } from './components/field/field.component';
 import { ReturnComponent } from './components/return/return.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ConsultComponent } from './pages/consult/consult.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './pages/home/home.component';
     TitleComponent,
     FieldComponent,
     ReturnComponent,
-    HomeComponent
+    HomeComponent,
+    ConsultComponent
   ],
   imports: [
     BrowserModule,
