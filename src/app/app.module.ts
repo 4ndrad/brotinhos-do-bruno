@@ -11,6 +11,7 @@ import { FieldComponent } from './components/field/field.component';
 import { ReturnComponent } from './components/return/return.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ConsultComponent } from './pages/consult/consult.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ConsultComponent } from './pages/consult/consult.component';
     FieldComponent,
     ReturnComponent,
     HomeComponent,
-    ConsultComponent
+    ConsultComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
