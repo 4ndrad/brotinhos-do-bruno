@@ -12,6 +12,7 @@ import { ReturnComponent } from './components/return/return.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ConsultComponent } from './pages/consult/consult.component';
 import { CardComponent } from './components/card/card.component';
+import { UpdateComponent } from './pages/update/update.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CardComponent } from './components/card/card.component';
     ReturnComponent,
     HomeComponent,
     ConsultComponent,
-    CardComponent
+    CardComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

@@ -11,8 +11,8 @@
   </div>
 
   <div class="card_options">
-    <a href=""><img src="../../../assets/icon _edit pencil.svg" alt="update"></a>
-    <a
+    <a [routerLink]="['/update']"><img src="../../../assets/icon _edit pencil.svg" alt="update"></a>
+    <a href="#"
       (click)="copyForClipboard($event)"
     ><img src="../../../assets/icon _copy.svg" alt="copy"></a>
     <a href=""><img src="../../../assets/icon _trash.svg" alt="delete"></a>
