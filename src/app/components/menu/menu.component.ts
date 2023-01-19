@@ -1,4 +1,4 @@
-import { User } from './../../../environments/user';
+import { User } from '../../data/user';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/pages/login/auth.service';
 

@@ -1,3 +1,4 @@
+import { ChildGuard } from './guards/child.service';
 import { AuthService } from './pages/login/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -15,9 +16,11 @@ import { ConsultComponent } from './pages/consult/consult.component';
 import { CardComponent } from './components/card/card.component';
 import { UpdateComponent } from './pages/update/update.component';
 import { LoginComponent } from './pages/login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AuthGuard } from './guards/auth.guard.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,15 +35,18 @@ import { AuthGuard } from './guards/auth.guard.service';
     ConsultComponent,
     CardComponent,
     UpdateComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     CommonModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, ChildGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

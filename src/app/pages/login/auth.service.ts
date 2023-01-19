@@ -1,4 +1,4 @@
-import { User } from './../../../environments/user';
+import { User } from '../../data/user';
 import { Injectable, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -15,7 +15,7 @@ export class AuthService {
   constructor(private router: Router) { }
 
   login(user: User){
-    if(user.name === 'user@gmail.com' && user.password === '123'){
+    if(user.name === 'user' && user.password === '123'){
       this.userAuthenticated = true;
       this.menu.emit(true);
       this.router.navigate(['/']);

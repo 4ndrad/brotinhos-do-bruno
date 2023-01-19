@@ -1,0 +1,44 @@
+{
+  "student": [
+    {
+      "id": 1,
+      "student": "Natan Andrade de Lima",
+      "course": "system analysis and development",
+      "mother": "blaablabalab",
+      "father": "xahbsihaasona",
+      "phone": "258258282",
+      "email": "natan07lima@outlook.com",
+      "password": "15156165"
+    },
+    {
+      "id": 3,
+      "student": "Amanda Brotinho",
+      "course": "system analysis and development",
+      "mother": "blaablabalab",
+      "father": "xahbsihaasona",
+      "phone": "258258282",
+      "email": "natan07lima@outlook.com",
+      "password": "15156165"
+    },
+    {
+      "id": 4,
+      "student": "Valter Andrade de Lima",
+      "course": "system analysis and development",
+      "mother": "blaablabalab",
+      "father": "xahbsihaasona",
+      "phone": "258258282",
+      "email": "natan07lima@outlook.com",
+      "password": "15156165"
+    },
+    {
+      "id": 5,
+      "student": "SUCESSO",
+      "course": "system analysis and development",
+      "mother": "blaablabalab",
+      "father": "xahbsihaasona",
+      "phone": "258258282",
+      "email": "natan07lima@outlook.com",
+      "password": "15156165"
+    }
+  ]
+}
