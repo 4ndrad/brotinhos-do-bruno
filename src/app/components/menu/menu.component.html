@@ -1,4 +1,4 @@
-<div class="container_menu">
+<div *ngIf="menu" class="container_menu">
   <div class="logo_menu">
     <a [routerLink]="['/']"
       ><img src="../../../../../assets/logo _company.svg" alt="logo"
@@ -22,7 +22,7 @@
       </ul>
     </div>
     <div>
-      <app-button name="logout" class="buttonDefault"></app-button>
+      <a href="" [routerLink]="['/login']"  (click)="logout()" class="buttonDefault">logout</a>
     </div>
   </div>
 </div>

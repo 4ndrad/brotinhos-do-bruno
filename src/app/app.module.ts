@@ -1,3 +1,4 @@
+import { AuthService } from './pages/login/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -13,6 +14,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { ConsultComponent } from './pages/consult/consult.component';
 import { CardComponent } from './components/card/card.component';
 import { UpdateComponent } from './pages/update/update.component';
+import { LoginComponent } from './pages/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { AuthGuard } from './guards/auth.guard.service';
 
 @NgModule({
   declarations: [
@@ -26,13 +31,16 @@ import { UpdateComponent } from './pages/update/update.component';
     HomeComponent,
     ConsultComponent,
     CardComponent,
-    UpdateComponent
+    UpdateComponent,
+    LoginComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

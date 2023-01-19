@@ -1,0 +1,17 @@
+<div class="container_login">
+  <div class="login">
+    <div class="login_title">
+      <img src="../../../assets/logo _company.svg" alt="logo" />
+      <app-title title="| sing in"></app-title>
+    </div>
+    <div class="login_fields">
+      <input [(ngModel)]="user.name" type="email" placeholder="Email" class="field">
+      <input [(ngModel)]="user.password" type="password" placeholder="Password" class="field">
+
+    </div>
+    <div class="login_access">
+      <button type="submit" (click)="login()" class="buttonConfirm">Sing In</button>
+      <a href="">Forgot password ?</a>
+    </div>
+  </div>
+</div>
