@@ -57,7 +57,7 @@ export class CardComponent implements OnInit {
     document.addEventListener("copy", listener, false)
     document.execCommand("copy");
     document.removeEventListener("copy", listener, false);
-    alert("copiado")
+    alert("copied")
 }
 
 
