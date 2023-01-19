@@ -4,82 +4,24 @@
     <div class="consult-title">
       <app-title title="consult studant"></app-title>
     </div>
+    
     <div class="consult_search">
       <img src="../../../assets/icon _search.svg" alt="search" />
-      <app-field type="text" skin="typeSearch" placeholder="search...">
-      </app-field>
-      <app-button class="buttonSearch" name="search"></app-button>
+      <input type="text" class="typeSearch" placeholder="search..." [formControl]="queryField"/>
+      <button class="buttonSearch" name="search" (click)="search()">Search</button>
     </div>
+
     <div class="consult_result">
       <app-card
-        enrolloment="15"
-        student="Natan Andrade de Lima"
-        course="system analysis and development"
-        mother="blaablabalab"
-        father="xahbsihaasona"
-        phone="258258282"
-        email="natan07lima@outlook.com"
-        password="15156165"
-      ></app-card>
-      <app-card
-        enrolloment="17"
-        student="Cleide"
-        course="system analysis and development"
-        mother="blaablabalab"
-        father="xahbsihaasona"
-        phone="258258282"
-        email="natan07lima@outlook.com"
-        password="15156165"
-      ></app-card>
-      <app-card
-        enrolloment="18"
-        student="Cassia"
-        course="system analysis and development"
-        mother="blaablabalab"
-        father="xahbsihaasona"
-        phone="258258282"
-        email="natan07lima@outlook.com"
-        password="15156165"
-      ></app-card>
-      <app-card
-        enrolloment="19"
-        student="Douglas"
-        course="system analysis and development"
-        mother="blaablabalab"
-        father="xahbsihaasona"
-        phone="258258282"
-        email="natan07lima@outlook.com"
-        password="15156165"
-      ></app-card>
-      <app-card
-        enrolloment="20"
-        student="Cassandra"
-        course="system analysis and development"
-        mother="blaablabalab"
-        father="xahbsihaasona"
-        phone="258258282"
-        email="natan07lima@outlook.com"
-        password="15156165"
-      ></app-card>
-      <app-card
-        enrolloment="21"
-        student="Vitor"
-        course="system analysis and development"
-        mother="blaablabalab"
-        father="xahbsihaasona"
-        phone="258258282"
-        email="natan07lima@outlook.com"
-        password="15156165"
-      ></app-card>
-      <app-card
-        enrolloment="22"
-        student="Cassio"
-        course="system analysis and development"
-        mother="blaablabalab"
-        father="xahbsihaasona"
-        phone="258258282"
-        email="natan07lima@outlook.com"
-        password="15156165"
+        *ngFor="let consult of consult"
+        enrolloment= {{consult.id}}
+        student="{{consult.student}}"
+        course="{{consult.course}}"
+        mother="{{consult.mother}}"
+        father="{{consult.father}}"
+        phone="{{consult.phone}}"
+        email="{{consult.email}}"
+        password="{{consult.password}}"
       ></app-card>
     </div>
   </div>

@@ -1,4 +1,7 @@
+import { Student } from '../../data/student';
+import { ConsultService } from './consult.service';
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-consult',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsultComponent implements OnInit {
 
-  constructor() { }
+  consult: Student[];
+  queryField = new FormControl();
+
+  constructor(private service: ConsultService) { }
 
   ngOnInit() {
+    this.service.list().subscribe(dados => this.consult = dados);
   }
 
+  search(){
+    console.log(this.queryField.value)
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
+import { FormControl } from "@angular/forms";
 
 @Component({
   selector: "app-field",
@@ -20,8 +21,6 @@ export class FieldComponent implements OnInit {
 
   @Input()
   placeholder: string = "";
-
-
 
   constructor() {}
 
