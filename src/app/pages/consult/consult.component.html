@@ -4,14 +4,14 @@
     <div class="consult-title">
       <app-title title="consult studant"></app-title>
     </div>
-    
+
     <div class="consult_search">
       <img src="../../../assets/icon _search.svg" alt="search" />
       <input type="text" class="typeSearch" placeholder="search..." [formControl]="queryField"/>
       <button class="buttonSearch" name="search" (click)="search()">Search</button>
     </div>
 
-    <div class="consult_result">
+    <div class="consult_result" *ngIf="consult$ | async as consult; else loading">
       <app-card
         *ngFor="let consult of consult"
         enrolloment= {{consult.id}}
@@ -24,5 +24,9 @@
         password="{{consult.password}}"
       ></app-card>
     </div>
+
+    <ng-template #loading>
+      <span>Loading ...</span>
+    </ng-template>
   </div>
 </div>
