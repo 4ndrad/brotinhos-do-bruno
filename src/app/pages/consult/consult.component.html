@@ -7,26 +7,53 @@
 
     <div class="consult_search">
       <img src="../../../assets/icon _search.svg" alt="search" />
-      <input type="text" class="typeSearch" placeholder="search..." [formControl]="queryField"/>
-      <button class="buttonSearch" name="search" (click)="search()">Search</button>
+      <input
+        type="text"
+        class="typeSearch"
+        placeholder="search..."
+        [formControl]="queryField"
+      />
+      <button class="buttonSearch" name="search" (click)="search()">
+        Search
+      </button>
     </div>
 
-    <div class="consult_result" *ngIf="consult$ | async as consult; else loading">
+    <div
+      class="consult_result"
+      *ngIf="consult$ | async as consult; else loadingNoError"
+    >
       <app-card
         *ngFor="let consult of consult"
-        enrolloment= {{consult.id}}
-        student="{{consult.student}}"
-        course="{{consult.course}}"
-        mother="{{consult.mother}}"
-        father="{{consult.father}}"
-        phone="{{consult.phone}}"
-        email="{{consult.email}}"
-        password="{{consult.password}}"
+        enrolloment="{{ consult.id }}"
+        student="{{ consult.student }}"
+        course="{{ consult.course }}"
+        mother="{{ consult.mother }}"
+        father="{{ consult.father }}"
+        phone="{{ consult.phone }}"
+        email="{{ consult.email }}"
+        password="{{ consult.password }}"
       ></app-card>
     </div>
 
-    <ng-template #loading>
-      <span>Loading ...</span>
+    <ng-template #loadingNoError>
+      <div class="container_loadingError" *ngIf="error$ | async; else loading">
+        <p>Error loading. Try again later</p>
+        <button class="refreshError">
+          <img src="../../../assets/icon_refresh.png" alt="refresh" />
+        </button>
+      </div>
+      <ng-template #loading>
+        <div class="container_loading">
+          <p>Loading</p>
+          <div class="refreshDouble">
+            <img
+              class="refreshDouble"
+              src="../../../assets/icon _refresh_double.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </ng-template>
     </ng-template>
   </div>
 </div>
