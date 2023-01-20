@@ -31,7 +31,6 @@
 
 .consult_result
   display: flex
-  justify-content: space-between;
   flex-wrap: wrap;
 
 .typeSearch
@@ -63,6 +62,12 @@
 
   img
     height: 20px
+
+  &:active
+    img
+      animation: spinner .6s linear infinite;
+
+
 
 @keyframes spinner
   to

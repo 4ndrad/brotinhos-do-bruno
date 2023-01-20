@@ -20,6 +20,10 @@ export class ConsultComponent implements OnInit {
   constructor(private service: ConsultService) { }
 
   ngOnInit() {
+    this.onRefresh()
+  }
+
+  onRefresh(){
     this.consult$ = this.service.list()
     .pipe(
       catchError(error =>{
