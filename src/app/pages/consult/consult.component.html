@@ -23,7 +23,7 @@
       *ngIf="consult$ | async as consult; else loadingNoError"
     >
       <app-card
-        *ngFor="let consult of consult"
+        *ngFor="let consult of consult | slice:0:3"
         enrolloment="{{ consult.id }}"
         student="{{ consult.student }}"
         course="{{ consult.course }}"

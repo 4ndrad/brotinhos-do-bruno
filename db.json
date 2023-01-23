@@ -49,6 +49,26 @@
       "phone": "258258282",
       "email": "natan07lima@outlook.com",
       "password": "15156165"
+    },
+    {
+      "id": 7,
+      "student": "TESTE",
+      "course": "system analysis and development",
+      "mother": "blaablabalab",
+      "father": "xahbsihaasona",
+      "phone": "258258282",
+      "email": "natan07lima@outlook.com",
+      "password": "15156165"
+    },
+    {
+      "id": 8,
+      "student": "TESTE 2",
+      "course": "system analysis and development",
+      "mother": "blaablabalab",
+      "father": "xahbsihaasona",
+      "phone": "258258282",
+      "email": "natan07lima@outlook.com",
+      "password": "15156165"
     }
   ]
 }
