@@ -1,4 +1,4 @@
-import { empty, Observable, of, Subject } from 'rxjs';
+import { Observable, of, Subject } from 'rxjs';
 import { Student } from '../../data/student';
 import { ConsultService } from './consult.service';
 import { Component, OnInit } from '@angular/core';
@@ -20,6 +20,10 @@ export class ConsultComponent implements OnInit {
   constructor(private service: ConsultService) { }
 
   ngOnInit() {
+    this.onRefresh()
+  }
+
+  onRefresh(){
     this.consult$ = this.service.list()
     .pipe(
       catchError(error =>{

@@ -23,7 +23,7 @@
       *ngIf="consult$ | async as consult; else loadingNoError"
     >
       <app-card
-        *ngFor="let consult of consult"
+        *ngFor="let consult of consult | slice:0:3"
         enrolloment="{{ consult.id }}"
         student="{{ consult.student }}"
         course="{{ consult.course }}"
@@ -38,7 +38,7 @@
     <ng-template #loadingNoError>
       <div class="container_loadingError" *ngIf="error$ | async; else loading">
         <p>Error loading. Try again later</p>
-        <button class="refreshError">
+        <button class="refreshError" (click)="onRefresh()">
           <img src="../../../assets/icon_refresh.png" alt="refresh" />
         </button>
       </div>
