@@ -1,6 +1,5 @@
-import { AlertModalComponent } from './../shared/alert-modal/alert-modal.component';
+import { AlertModalService } from './../shared/alert-modal/alert-modal.service';
 import { Component, Input, OnInit } from "@angular/core";
-import { BsModalRef, BsModalService } from "ngx-bootstrap/modal";
 
 @Component({
   selector: "app-card",
@@ -32,9 +31,7 @@ export class CardComponent implements OnInit {
   @Input()
   password: string = " ";
 
-  BsModalRef: BsModalRef;
-
-  constructor(private modalService: BsModalService) {}
+  constructor(private alertService: AlertModalService) {}
 
   ngOnInit() {}
 
@@ -71,10 +68,6 @@ export class CardComponent implements OnInit {
   }
 
   alertCopied(){
-    this.BsModalRef = this.modalService.show(AlertModalComponent);
-    this.BsModalRef.content.type = 'success';
-    this.BsModalRef.content.message = 'Copied content';
-    this.BsModalRef.content.srcIcon = '../../../../assets/check-circle.svg';
-    this.BsModalRef.content.nameIcon = 'check-circle';
+    this.alertService.alertSuccess("Copied content", "../../../../assets/check-circle.svg", "check-circle")
   }
 }
