@@ -69,6 +69,50 @@
       "phone": "258258282",
       "email": "natan07lima@outlook.com",
       "password": "15156165"
+    },
+    {
+      "student": "Natan Andrade andrad",
+      "mother": "Natan Andrade andrad",
+      "father": "Natan Andrade andrad",
+      "age": "15",
+      "course": "djdjd",
+      "period": "night",
+      "email": "natanal@primeit.com.br",
+      "phone": "1141333737",
+      "id": 9
+    },
+    {
+      "student": "Natan Andrade andrad",
+      "mother": "Natan Andrade andrad",
+      "father": "Natan Andrade andrad",
+      "age": "15",
+      "course": "djdjd",
+      "period": "night",
+      "email": "natanal@primeit.com.br",
+      "phone": "1141333737",
+      "id": 10
+    },
+    {
+      "student": "Natan Andrade andrad",
+      "mother": "Natan Andrade andrad",
+      "father": "Natan Andrade andrad",
+      "age": "16",
+      "course": "ddddd",
+      "period": "tarde",
+      "email": "natanal@primeit.com.br",
+      "phone": "1141333737",
+      "id": 11
+    },
+    {
+      "student": "TESTE02",
+      "mother": "Natan Andrade andrad",
+      "father": "Natan Andrade andrad",
+      "age": "14",
+      "course": "JJJJJJJJJJJJJJJJJJ",
+      "period": "NIGHT",
+      "email": "natanal@primeit.com.br",
+      "phone": "1141333737",
+      "id": 12
     }
   ]
 }
