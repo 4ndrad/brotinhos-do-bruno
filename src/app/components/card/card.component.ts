@@ -28,9 +28,6 @@ export class CardComponent implements OnInit {
   @Input()
   email: string = " ";
 
-  @Input()
-  password: string = " ";
-
   constructor(private alertService: AlertModalService) {}
 
   ngOnInit() {}
@@ -51,9 +48,7 @@ export class CardComponent implements OnInit {
       ", Email: " +
       this.email +
       ", Phone: " +
-      this.phone +
-      ", Password: " +
-      this.password;
+      this.phone 
 
     let listener = (e: ClipboardEvent) => {
       let clipboard = e.clipboardData || window["clipboardData"];
