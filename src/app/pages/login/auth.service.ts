@@ -37,6 +37,6 @@ export class AuthService {
   }
 
   alertErrorLogin(){
-    this.alertService.alertDanger("Your password or email is wrong", "../../../../assets/exclamation-triangle.svg", "exclamation-triangle")
+    this.alertService.alertDanger("Your password or email is wrong")
   }
 }
