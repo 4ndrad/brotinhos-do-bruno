@@ -27,7 +27,7 @@ const routes: Routes = [
     component: UpdateComponent,
     canActivate: [AuthGuard],
     canActivateChild: [ChildGuard],
-    children: [{ path: ":id", component: ConsultComponent }],
+    children: [{ path: "id", component: ConsultComponent }],
   },
 ];
 

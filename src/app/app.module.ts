@@ -14,7 +14,6 @@ import { FieldComponent } from './components/field/field.component';
 import { ReturnComponent } from './components/return/return.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ConsultComponent } from './pages/consult/consult.component';
-import { CardComponent } from './components/card/card.component';
 import { UpdateComponent } from './pages/update/update.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -35,7 +34,6 @@ import { SharedModule } from './components/shared/shared.module';
     ReturnComponent,
     HomeComponent,
     ConsultComponent,
-    CardComponent,
     UpdateComponent,
     LoginComponent,
   ],
