@@ -19,19 +19,46 @@
     </div>
 
     <div
-      class="consult_result"
+      class="card table-responsive"
       *ngIf="consult$ | async as consult; else loadingNoError"
     >
-      <app-card
-        *ngFor="let consult of consult | slice:0:3"
-        enrolloment="{{ consult.id }}"
-        student="{{ consult.student }}"
-        course="{{ consult.course }}"
-        mother="{{ consult.mother }}"
-        father="{{ consult.father }}"
-        phone="{{ consult.phone }}"
-        email="{{ consult.email }}"
-      ></app-card>
+      <table class="table tableMarginBttm table-bordered tablealign">
+        <thead class="table-secondary">
+          <tr>
+            <th>Enrolloment</th>
+            <th>Student</th>
+            <th>Course</th>
+            <th>Mother</th>
+            <th>Father</th>
+            <th>Email</th>
+            <th>phone</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let consult of consult| slice:0:3">
+          <tr>
+            <td >{{ consult.id }}</td>
+            <td>{{ consult.student }}</td>
+            <td>{{ consult.course }}</td>
+            <td>{{ consult.mother }}</td>
+            <td>{{ consult.father }}</td>
+            <td>{{ consult.email }}</td>
+            <td>{{ consult.phone }}</td>
+            <td>
+              <span class="card_options">
+                <a [routerLink]="['/update/id']"
+                  ><img
+                    src="../../../assets/icon _edit pencil.svg"
+                    alt="update"
+                /></a>
+                <a href=""
+                  ><img src="../../../assets/icon _trash.svg" alt="delete"
+                /></a>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <ng-template #loadingNoError>

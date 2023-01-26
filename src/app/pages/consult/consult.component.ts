@@ -4,6 +4,7 @@ import { ConsultService } from './consult.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { catchError } from 'rxjs/operators';
+import { AlertModalService } from 'src/app/components/shared/alert-modal/alert-modal.service';
 
 @Component({
   selector: 'app-consult',
@@ -15,9 +16,11 @@ export class ConsultComponent implements OnInit {
   consult$: Observable<Student[]>
   error$ = new Subject<boolean>()
 
+  consult:Student
+
   queryField = new FormControl();
 
-  constructor(private service: ConsultService) { }
+  constructor(private service: ConsultService, private modal: AlertModalService) { }
 
   ngOnInit() {
     this.onRefresh()
