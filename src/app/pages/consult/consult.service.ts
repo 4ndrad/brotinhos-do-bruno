@@ -21,6 +21,4 @@ export class ConsultService {
         tap(console.log)
       );
   }
-
-
 }
