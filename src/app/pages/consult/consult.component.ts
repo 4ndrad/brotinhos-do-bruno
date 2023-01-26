@@ -1,10 +1,10 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, of, Subject } from 'rxjs';
 import { Student } from '../../data/student';
 import { ConsultService } from './consult.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { catchError } from 'rxjs/operators';
-import { AlertModalService } from 'src/app/components/shared/alert-modal/alert-modal.service';
 
 @Component({
   selector: 'app-consult',
@@ -20,7 +20,7 @@ export class ConsultComponent implements OnInit {
 
   queryField = new FormControl();
 
-  constructor(private service: ConsultService, private modal: AlertModalService) { }
+  constructor(private service: ConsultService, private router:Router, private route:ActivatedRoute) { }
 
   ngOnInit() {
     this.onRefresh()
@@ -35,6 +35,10 @@ export class ConsultComponent implements OnInit {
         return of();
       })
     )
+  }
+
+  onUpdate(id){
+    this.router.navigate(['update', id],{relativeTo: this.route})
   }
 
   search(){

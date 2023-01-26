@@ -21,14 +21,12 @@ const routes: Routes = [
     path: "consult",
     component: ConsultComponent,
     canActivate: [AuthGuard],
-  },
-  {
-    path: "update",
-    component: UpdateComponent,
-    canActivate: [AuthGuard],
     canActivateChild: [ChildGuard],
-    children: [{ path: "id", component: ConsultComponent }],
-  },
+    children: [  {
+      path: "update/:id",
+      component: UpdateComponent,
+    }]
+  }
 ];
 
 @NgModule({
