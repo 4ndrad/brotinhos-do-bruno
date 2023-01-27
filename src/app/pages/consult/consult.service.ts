@@ -5,9 +5,7 @@ import { HttpClient } from '@angular/common/http'
 import { pipe } from 'rxjs';
 import {tap, delay} from  'rxjs/operators'
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ConsultService {
 
   private readonly API = `${environment.API}student`

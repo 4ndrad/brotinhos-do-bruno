@@ -1,3 +1,4 @@
+import { LoadGuard } from './guards/load.guard.service';
 import { PagesModule } from './pages/pages.module';
 import { ComponentsModule } from './components/components.module';
 import { ChildGuard } from './guards/child.service';
@@ -25,7 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ComponentsModule,
     PagesModule
   ],
-  providers: [AuthService, AuthGuard, ChildGuard],
+  providers: [AuthService, AuthGuard, ChildGuard, LoadGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
