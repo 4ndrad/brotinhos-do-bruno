@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ConsultComponent } from './consult/consult.component';
-import { UpdateComponent } from './update/update.component';
+import { UpdateComponent } from './consult/update/update.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
