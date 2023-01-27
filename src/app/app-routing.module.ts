@@ -1,6 +1,6 @@
 import { ChildGuard } from "./guards/child.service";
 import { LoginComponent } from "./pages/login/login.component";
-import { UpdateComponent } from "./pages/update/update.component";
+import { UpdateComponent } from "./pages/consult/update/update.component";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./pages/home/home.component";
