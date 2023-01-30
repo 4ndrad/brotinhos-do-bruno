@@ -24,17 +24,13 @@ export class UpdateComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.route.params
-      .pipe(
-        map((params: any) => params["id"]),
-        switchMap(id => this.service.loadById(id))
-      )
-      .subscribe(studant => this.getInformation(studant));
+
+    const student = this.route.snapshot.data['student']
 
     this.formUpdate = this.fb.group({
-      id: [null],
+      id: [student.id],
       student: [
-        null,
+        student.student,
         [
           Validators.required,
           Validators.minLength(3),
@@ -42,7 +38,7 @@ export class UpdateComponent implements OnInit {
         ],
       ],
       mother: [
-        null,
+        student.mother,
         [
           Validators.required,
           Validators.minLength(3),
@@ -50,7 +46,7 @@ export class UpdateComponent implements OnInit {
         ],
       ],
       father: [
-        null,
+        student.father,
         [
           Validators.required,
           Validators.minLength(3),
@@ -58,11 +54,11 @@ export class UpdateComponent implements OnInit {
         ],
       ],
       age: [
-        null,
+        student.age,
         [Validators.required, Validators.minLength(1), Validators.maxLength(2)],
       ],
       course: [
-        null,
+        student.course,
         [
           Validators.required,
           Validators.minLength(5),
@@ -70,11 +66,11 @@ export class UpdateComponent implements OnInit {
         ],
       ],
       period: [
-        null,
+        student.period,
         [Validators.required, Validators.minLength(5), Validators.maxLength(6)],
       ],
       email: [
-        null,
+        student.email,
         [
           Validators.required,
           Validators.minLength(12),
@@ -82,27 +78,13 @@ export class UpdateComponent implements OnInit {
         ],
       ],
       phone: [
-        null,
+        student.period,
         [
           Validators.required,
           Validators.minLength(9),
           Validators.maxLength(13),
         ],
       ],
-    });
-  }
-
-  getInformation(student) {
-    this.formUpdate.patchValue({
-      id: student.id,
-      student: student.student,
-      mother: student.mother,
-      father: student.father,
-      age: student.age,
-      course: student.course,
-      period: student.period,
-      email: student.email,
-      phone: student.phone,
     });
   }
 
