@@ -46,7 +46,7 @@ export class RegisterComponent implements OnInit {
           this.location.back();
         },
         error => this.modal.alertDanger("Error in creation"),
-        () => console.log('request completo')
+        () => console.log('request complete')
       );
     }
   }
