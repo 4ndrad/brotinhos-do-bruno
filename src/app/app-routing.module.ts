@@ -1,4 +1,4 @@
-import { ChildGuard } from "./guards/child.service";
+import { ChildrenGuard } from "./guards/children.service";
 import { LoginComponent } from "./pages/login/login.component";
 import { UpdateComponent } from "./pages/consult/update/update.component";
 import { NgModule } from "@angular/core";
@@ -21,12 +21,12 @@ const routes: Routes = [
     path: "consult",
     component: ConsultComponent,
     canActivate: [AuthGuard],
-    canActivateChild: [ChildGuard],
-    children: [  {
-      path: "update/:id",
-      component: UpdateComponent,
-    }]
-  }
+  },
+  {
+    path: "consult/update/:id",
+    component: UpdateComponent,
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({
