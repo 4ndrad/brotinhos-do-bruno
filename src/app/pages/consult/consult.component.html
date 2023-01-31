@@ -11,9 +11,8 @@
         type="text"
         class="typeSearch"
         placeholder="search..."
-        [formControl]="queryField"
       />
-      <button class="buttonSearch" name="search" (click)="search()">
+      <button class="buttonSearch" name="search">
         Search
       </button>
     </div>
@@ -51,7 +50,7 @@
                     src="../../../assets/icon _edit pencil.svg"
                     alt="update"
                 /></a>
-                <a href=""
+                <a (click)="onDelete(consult)"
                   ><img src="../../../assets/icon _trash.svg" alt="delete"
                 /></a>
               </span>
@@ -83,3 +82,12 @@
     </ng-template>
   </div>
 </div>
+
+<ng-template #deleteModal>
+  <div class="modal-body text-center">
+    <h5>Do you really want to delete?</h5>
+    <p>By clicking delete, this information will be deleted forever and it will not be possible to recover!</p>
+    <button type="button" class="btn btn-danger" (click)="onConfirmDelete()">Yes</button>
+    <button type="button" class="btn btn-default" (click)="onCancelDelete()">No</button>
+  </div>
+</ng-template>
