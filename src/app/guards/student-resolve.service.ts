@@ -1,4 +1,4 @@
-import { UpdateService } from "../pages/consult/update/update.service";
+import { ConsultService } from './../pages/consult/consult.service';
 import { Student } from "../data/student";
 import { Injectable } from "@angular/core";
 import {
@@ -12,7 +12,7 @@ import { Observable, of } from "rxjs";
   providedIn: "root",
 })
 export class StudentResolverGuard implements Resolve<Student> {
-  constructor(private service: UpdateService) {}
+  constructor(private service: ConsultService) {}
 
   resolve(
     route: ActivatedRouteSnapshot,

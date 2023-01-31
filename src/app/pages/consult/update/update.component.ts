@@ -3,8 +3,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { AlertModalService } from "src/app/components/shared/alert-modal/alert-modal.service";
 import { Location } from "@angular/common";
-import { UpdateService } from "./update.service";
-import { map, switchMap } from "rxjs/operators";
+import { ConsultService } from '../consult.service';
 
 @Component({
   selector: "app-update",
@@ -17,14 +16,13 @@ export class UpdateComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private service: UpdateService,
+    private service: ConsultService,
     private modal: AlertModalService,
     private location: Location,
     private route: ActivatedRoute
   ) {}
 
-  ngOnInit(
-  ) {
+  ngOnInit() {
 
     const student = this.route.snapshot.data['student']
 
