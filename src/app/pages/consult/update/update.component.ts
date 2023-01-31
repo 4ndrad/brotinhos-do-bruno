@@ -23,7 +23,8 @@ export class UpdateComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
-  ngOnInit() {
+  ngOnInit(
+  ) {
 
     const student = this.route.snapshot.data['student']
 

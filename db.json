@@ -9,16 +9,18 @@
       "course": "system analysis and development",
       "period": "night",
       "email": "natan@outlook.com",
-      "phone": "155555555"
+      "phone": "156566666666"
     },
     {
       "id": 3,
       "student": "Amanda Brotinho",
-      "course": "system analysis and development",
       "mother": "blaablabalab",
       "father": "xahbsihaasona",
-      "phone": "258258282",
-      "email": "lima@outlook.com"
+      "age": "20",
+      "course": "system analysis and development",
+      "period": "night",
+      "email": "lima@outlook.com",
+      "phone": "114579895"
     },
     {
       "id": 4,
@@ -30,15 +32,6 @@
       "email": "skksndk@outlook.com"
     },
     {
-      "id": 5,
-      "student": "SUCESSO",
-      "course": "system analysis and development",
-      "mother": "blaablabalab",
-      "father": "xahbsihaasona",
-      "phone": "258258282",
-      "email": "gsuadguagd@gmail.com"
-    },
-    {
       "id": 6,
       "student": "Valter Andrade de Lima",
       "course": "system analysis and development",
@@ -46,15 +39,6 @@
       "father": "xahbsihaasona",
       "phone": "258258282",
       "email": "jjjjj@outlook.com"
-    },
-    {
-      "id": 7,
-      "student": "TESTE",
-      "course": "system analysis and development",
-      "mother": "blaablabalab",
-      "father": "xahbsihaasona",
-      "phone": "258258282",
-      "email": "ajsaja@outlook.com"
     },
     {
       "id": 8,
@@ -75,28 +59,6 @@
       "email": "natanal@primeit.com.br",
       "phone": "1141333737",
       "id": 9
-    },
-    {
-      "student": "Natan Andrade andrad",
-      "mother": "Natan Andrade andrad",
-      "father": "Natan Andrade andrad",
-      "age": "15",
-      "course": "djdjd",
-      "period": "night",
-      "email": "natanal@primeit.com.br",
-      "phone": "1141333737",
-      "id": 10
-    },
-    {
-      "student": "Natan Andrade andrad",
-      "mother": "Natan Andrade andrad",
-      "father": "Natan Andrade andrad",
-      "age": "16",
-      "course": "ddddd",
-      "period": "tarde",
-      "email": "natanal@primeit.com.br",
-      "phone": "1141333737",
-      "id": 11
     },
     {
       "student": "TESTE02",
