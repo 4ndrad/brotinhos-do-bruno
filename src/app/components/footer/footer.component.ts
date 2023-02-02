@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/data/user';
 import { AuthService } from 'src/app/pages/login/auth.service';
 
 @Component({
@@ -10,6 +11,8 @@ export class FooterComponent implements OnInit {
 
   footer:boolean = false;
 
+  private user: User = new User();
+
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
@@ -17,5 +20,10 @@ export class FooterComponent implements OnInit {
       showFooter => this.footer = showFooter
     )
   }
+
+  logout(){
+    this.authService.logout(this.user)
+  }
+
 
 }

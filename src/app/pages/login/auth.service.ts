@@ -33,6 +33,7 @@ export class AuthService {
   logout(user: User){
     this.userAuthenticated = false
     this.menu.emit(false);
+    this.footer.emit(false);
   }
 
   userIsAuthenticated(){
