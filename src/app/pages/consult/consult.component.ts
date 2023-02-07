@@ -47,7 +47,9 @@ export class ConsultComponent implements OnInit {
   }
 
   onUpdate(id) {
-    this.router.navigate(["update", id], { relativeTo: this.route });
+    this.router.navigate(["update", id], { relativeTo: this.route }).catch(
+      error => this.modal.alertDanger("Error redirecting to update")
+    );
   }
 
   onDelete(consult) {

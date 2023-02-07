@@ -9,7 +9,7 @@
       "course": "system analysis and development",
       "period": "night",
       "email": "natan@outlook.com",
-      "phone": "156566666666"
+      "phone": "154887888"
     },
     {
       "id": 3,
@@ -39,26 +39,6 @@
       "father": "xahbsihaasona",
       "phone": "258258282",
       "email": "jjjjj@outlook.com"
-    },
-    {
-      "id": 8,
-      "student": "TESTE 2",
-      "course": "system analysis and development",
-      "mother": "blaablabalab",
-      "father": "xahbsihaasona",
-      "phone": "258258282",
-      "email": ""
-    },
-    {
-      "student": "TESTE02",
-      "mother": "Natan Andrade andrad",
-      "father": "Natan Andrade andrad",
-      "age": "14",
-      "course": "JJJJJJJJJJJJJJJJJJ",
-      "period": "NIGHT",
-      "email": "anshsh@mail.comg",
-      "phone": "1141333737",
-      "id": 12
     },
     {
       "student": "Teste 3",

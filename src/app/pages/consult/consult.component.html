@@ -7,14 +7,8 @@
 
     <div class="consult_search">
       <img src="../../../assets/icon _search.svg" alt="search" />
-      <input
-        type="text"
-        class="typeSearch"
-        placeholder="search..."
-      />
-      <button class="buttonSearch" name="search">
-        Search
-      </button>
+      <input type="text" class="typeSearch" placeholder="search..." />
+      <button class="buttonSearch" name="search">Search</button>
     </div>
 
     <div
@@ -34,9 +28,9 @@
             <th>Options</th>
           </tr>
         </thead>
-        <tbody *ngFor="let consult of consult| slice:0:10">
+        <tbody *ngFor="let consult of consult | slice : 0 : 10">
           <tr>
-            <td >{{ consult.id }}</td>
+            <td>{{ consult.id }}</td>
             <td>{{ consult.student }}</td>
             <td>{{ consult.course }}</td>
             <td>{{ consult.mother }}</td>
@@ -86,8 +80,15 @@
 <ng-template #deleteModal>
   <div class="modal-body text-center">
     <h5>Do you really want to delete?</h5>
-    <p>By clicking delete, this information will be deleted forever and it will not be possible to recover!</p>
-    <button type="button" class="btn btn-danger" (click)="onConfirmDelete()">Yes</button>
-    <button type="button" class="btn btn-default" (click)="onCancelDelete()">No</button>
+    <p>
+      By clicking delete, this information will be deleted forever and it will
+      not be possible to recover!
+    </p>
+    <button type="button" class="btn btn-danger" (click)="onConfirmDelete()">
+      Yes
+    </button>
+    <button type="button" class="btn btn-default" (click)="onCancelDelete()">
+      No
+    </button>
   </div>
 </ng-template>
