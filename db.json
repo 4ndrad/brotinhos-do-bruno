@@ -29,6 +29,25 @@
       "mother": "blaablabalab",
       "father": "xahbsihaasona",
       "phone": "258258282",
+    },
+    {
+      "id": 5,
+      "student": "SUCESSO",
+      "course": "system analysis and development",
+      "mother": "blaablabalab",
+      "father": "xahbsihaasona",
+      "phone": "258258282",
+      "email": "sjsjsjsjs",
+      "password": "15156165"
+    },
+    {
+      "id": 6,
+      "student": "Valter Andrade de Lima",
+      "course": "system analysis and development",
+      "mother": "blaablabalab",
+      "father": "xahbsihaasona",
+      "phone": "258258282",
+      "password": "15156165"
       "email": "skksndk@outlook.com"
     },
     {
