@@ -1,0 +1,13 @@
+<div class="alert alert-{{ type }} alertStyle" role="alert">
+  <div>
+    <img src="{{ srcIcon }}" alt="{{ nameIcon }}" />
+    {{ message }}
+  </div>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+    (click)="onClose()"
+  ></button>
+</div>

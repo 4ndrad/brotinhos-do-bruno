@@ -1,63 +1,285 @@
 <div class="container_register">
-
   <app-return></app-return>
   <div class="register_alingn">
     <div class="register">
       <div class="register_title">
         <app-title title="| register new studant"></app-title>
       </div>
-      <app-field
-        type="text"
-        skin="typeText"
-        placeholder="student full name"
-      ></app-field>
-      <app-field
-        type="text"
-        skin="typeText"
-        placeholder="mother full name"
-      ></app-field>
-      <app-field
-        type="text"
-        skin="typeText"
-        placeholder="father full name"
-      ></app-field>
-      <app-field
-        type="text"
-        skin="typeText"
-        placeholder="enrollment number"
-      ></app-field>
-      <div class="small_field">
-        <app-field
-          type="select"
-          skin="typeTextSmall"
-          placeholder="Age"
-        ></app-field>
-        <app-field
-          type="text"
-          skin="typeTextMedium"
-          placeholder="Course"
-        ></app-field>
-        <app-field
-          type="text"
-          skin="typeTextSmall"
-          placeholder="Period"
-        ></app-field>
-      </div>
-      <div class="contact_field">
-        <app-field type="email" skin="typeMedium" placeholder="email"></app-field>
-        <app-field type="tel" skin="typeMedium" placeholder="phone"></app-field>
-      </div>
-      <div class="password_field">
-        <app-field type="password" skin="typeMedium" placeholder="password"></app-field>
-        <app-field type="password" skin="typeMedium" placeholder="confirm password"></app-field>
-      </div>
+
+      <form class="needs-validation" novalidate [formGroup]="form">
+        <div class="form-row">
+          <div class="col-md-12 mb-3">
+            <label for="student">Student Full name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Student Full name"
+              formControlName="student"
+              [ngClass]="{ 'is-invalid': submitted && hasError('student') }"
+            />
+            <div
+              class="invalid-feedback"
+              *ngIf="hasError('student') && hasError('student')['required']"
+            >
+              Please enter the student name
+            </div>
+            <div
+              class="invalid-feedback"
+              *ngIf="hasError('student') && hasError('student')['minlength']"
+            >
+              student name must be at least
+              {{ hasError("student")["minlength"].requiredLength }} characters
+              long
+            </div>
+            <div
+              class="invalid-feedback"
+              *ngIf="hasError('student') && hasError('student')['maxlength']"
+            >
+              maximum number of characters in the name is
+              {{ hasError("student")["maxlength"].requiredLength }}
+            </div>
+          </div>
+
+          <div class="col-md-12 mb-3">
+            <label for="mother">Mother Full name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Mother Full name"
+              formControlName="mother"
+              [ngClass]="{ 'is-invalid': submitted && hasError('mother') }"
+            />
+            <div
+              class="invalid-feedback"
+              *ngIf="hasError('mother') && hasError('mother')['required']"
+            >
+              Please enter the mother name
+            </div>
+            <div
+              class="invalid-feedback"
+              *ngIf="hasError('mother') && hasError('mother')['minlength']"
+            >
+              mother name must be at least
+              {{ hasError("mother")["minlength"].requiredLength }} characters
+              long
+            </div>
+            <div
+              class="invalid-feedback"
+              *ngIf="hasError('mother') && hasError('mother')['maxlength']"
+            >
+              maximum number of characters in the name is
+              {{ hasError("mother")["maxlength"].requiredLength }}
+            </div>
+          </div>
+
+          <div class="col-md-12 mb-3">
+            <label for="father">Father Full name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Father Full name"
+              formControlName="father"
+              [ngClass]="{ 'is-invalid': submitted && hasError('father') }"
+            />
+            <div
+              class="invalid-feedback"
+              *ngIf="hasError('father') && hasError('father')['required']"
+            >
+              Please enter the father name
+            </div>
+            <div
+              class="invalid-feedback"
+              *ngIf="hasError('father') && hasError('father')['minlength']"
+            >
+              Father name must be at least
+              {{ hasError("father")["minlength"].requiredLength }} characters
+              long
+            </div>
+            <div
+              class="invalid-feedback"
+              *ngIf="hasError('father') && hasError('father')['maxlength']"
+            >
+              Maximum number of characters in the name is
+              {{ hasError("father")["maxlength"].requiredLength }}
+            </div>
+          </div>
+
+          <div class="col-md-12 mb-3 filedSpaceBetween">
+            <div class="col-md-3">
+              <label for="age">Age</label>
+              <input
+                type="text"
+                class="form-control text-center"
+                placeholder="Age"
+                formControlName="age"
+                [ngClass]="{ 'is-invalid': submitted && hasError('age') }"
+              />
+              <div
+                class="invalid-feedback"
+                *ngIf="hasError('age') && hasError('age')['required']"
+              >
+                Please enter the age
+              </div>
+              <div
+                class="invalid-feedback"
+                *ngIf="hasError('age') && hasError('age')['minlength']"
+              >
+                Age must be at least
+                {{ hasError("age")["minlength"].requiredLength }} characters
+                long
+              </div>
+              <div
+                class="invalid-feedback"
+                *ngIf="hasError('age') && hasError('age')['maxlength']"
+              >
+                Maximum number of characters in the age is
+                {{ hasError("age")["maxlength"].requiredLength }}
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <label for="course">Course</label>
+              <input
+                type="text"
+                class="form-control text-center"
+                placeholder="Course"
+                formControlName="course"
+                [ngClass]="{ 'is-invalid': submitted && hasError('course') }"
+              />
+              <div
+                class="invalid-feedback"
+                *ngIf="hasError('course') && hasError('course')['required']"
+              >
+                Please enter the course
+              </div>
+              <div
+                class="invalid-feedback"
+                *ngIf="hasError('course') && hasError('course')['minlength']"
+              >
+                Course must be at least
+                {{ hasError("course")["minlength"].requiredLength }} characters
+                long
+              </div>
+              <div
+                class="invalid-feedback"
+                *ngIf="hasError('course') && hasError('course')['maxlength']"
+              >
+                Maximum number of characters in the course is
+                {{ hasError("course")["maxlength"].requiredLength }}
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="period">Period</label>
+              <input
+                type="text"
+                class="form-control text-center"
+                placeholder="Period"
+                formControlName="period"
+                [ngClass]="{ 'is-invalid': submitted && hasError('period') }"
+              />
+              <div
+                class="invalid-feedback"
+                *ngIf="hasError('period') && hasError('period')['required']"
+              >
+                Please enter the period
+              </div>
+              <div
+                class="invalid-feedback"
+                *ngIf="hasError('period') && hasError('period')['minlength']"
+              >
+                Period must be at least
+                {{ hasError("period")["minlength"].requiredLength }} characters
+                long
+              </div>
+              <div
+                class="invalid-feedback"
+                *ngIf="hasError('period') && hasError('period')['maxlength']"
+              >
+                Maximum number of characters in the period is
+                {{ hasError("period")["maxlength"].requiredLength }}
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 mb-3 filedSpaceBetween">
+            <div class="col-md-6">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Email"
+                formControlName="email"
+                [ngClass]="{ 'is-invalid': submitted && hasError('email') }"
+              />
+              <div
+                class="invalid-feedback"
+                *ngIf="hasError('email') && hasError('email')['required']"
+              >
+                Please enter the email
+              </div>
+              <div
+                class="invalid-feedback"
+                *ngIf="hasError('email') && hasError('email')['minlength']"
+              >
+                Email must be at least
+                {{ hasError("email")["minlength"].requiredLength }} characters
+                long
+              </div>
+              <div
+                class="invalid-feedback"
+                *ngIf="hasError('email') && hasError('email')['maxlength']"
+              >
+                Maximum number of characters in the email is
+                {{ hasError("email")["maxlength"].requiredLength }}
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <label for="phone">Phone</label>
+              <input
+                type="tel"
+                class="form-control"
+                placeholder="Phone"
+                formControlName="phone"
+                [ngClass]="{ 'is-invalid': submitted && hasError('phone') }"
+              />
+              <div
+                class="invalid-feedback"
+                *ngIf="hasError('phone') && hasError('phone')['required']"
+              >
+                Please enter the phone
+              </div>
+              <div
+                class="invalid-feedback"
+                *ngIf="hasError('phone') && hasError('phone')['minlength']"
+              >
+                Phone must be at least
+                {{ hasError("phone")["minlength"].requiredLength }} characters
+                long
+              </div>
+              <div
+                class="invalid-feedback"
+                *ngIf="hasError('phone') && hasError('phone')['maxlength']"
+              >
+                Maximum number of characters in the phone is
+                {{ hasError("phone")["maxlength"].requiredLength }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 containerBtn">
+          <button type="submit" (click)="onSubmit()" class="buttonConfirm">
+            Register
+          </button>
+          <button type="submit" (click)="onCancel()" class="buttonCancel">
+            Cancel
+          </button>
+        </div>
+      </form>
     </div>
-    <div class="container_button">
-      <app-button
-      class="buttonConfirm"
-      name="register"
-      >
-      </app-button>
-    </div>
+    <span class="purple-tree">
+      <img src="../../../assets/purple-tree.png">
+    </span>
   </div>
 </div>

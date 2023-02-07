@@ -1,6 +1,6 @@
 .container_consult
-  margin: 0 25px 10px 25px;
-  min-height: 86vh;
+  margin: 0 25px 0px 25px;
+  min-height: 100vh;
   background-color: #ffff;
   border-radius: 10px;
   box-sizing: border-box;
@@ -15,6 +15,16 @@
 .consult_title
   margin: 25px 0
 
+.card_options
+  display: flex
+  justify-content: flex-end
+
+  a
+    margin: 10px
+
+  img
+    height: 18px
+
 .consult_search
   display: flex
   justify-content: space-between
@@ -28,11 +38,6 @@
     margin-left: 10px
     height: 15px
     margin-top: 10px
-
-.consult_result
-  display: flex
-  justify-content: space-between;
-  flex-wrap: wrap;
 
 .typeSearch
   float: left;
@@ -51,3 +56,41 @@
   background-color: #673AB7;
   color: #ffff
   font-weight: none
+
+.container_loadingError, .container_loading
+  display: flex
+
+.refreshError
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+
+  img
+    height: 20px
+
+  &:active
+    img
+      animation: spinner .6s linear infinite;
+
+
+
+@keyframes spinner
+  to
+    transform: rotate(360deg);
+
+.refreshDouble
+  width: 20px;
+  margin-left: 10px;
+  img
+    height: 20px
+    animation: spinner .6s linear infinite;
+
+.tableMarginBttm
+  margin-bottom: 0
+
+.tableAlign
+  align-items: center
+  text-align: center
+  height: 10px
+
