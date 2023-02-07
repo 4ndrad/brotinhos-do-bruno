@@ -7,32 +7,51 @@
 
     <div class="consult_search">
       <img src="../../../assets/icon _search.svg" alt="search" />
-      <input
-        type="text"
-        class="typeSearch"
-        placeholder="search..."
-        [formControl]="queryField"
-      />
-      <button class="buttonSearch" name="search" (click)="search()">
-        Search
-      </button>
+      <input type="text" class="typeSearch" placeholder="search..." />
+      <button class="buttonSearch" name="search">Search</button>
     </div>
 
     <div
-      class="consult_result"
+      class="card table-responsive"
       *ngIf="consult$ | async as consult; else loadingNoError"
     >
-      <app-card
-        *ngFor="let consult of consult | slice:0:3"
-        enrolloment="{{ consult.id }}"
-        student="{{ consult.student }}"
-        course="{{ consult.course }}"
-        mother="{{ consult.mother }}"
-        father="{{ consult.father }}"
-        phone="{{ consult.phone }}"
-        email="{{ consult.email }}"
-        password="{{ consult.password }}"
-      ></app-card>
+      <table class="table tableMarginBttm table-bordered tableAlign">
+        <thead class="table-secondary">
+          <tr>
+            <th>Enrolloment</th>
+            <th>Student</th>
+            <th>Course</th>
+            <th>Mother</th>
+            <th>Father</th>
+            <th>Email</th>
+            <th>phone</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let consult of consult | slice : 0 : 10">
+          <tr>
+            <td>{{ consult.id }}</td>
+            <td>{{ consult.student }}</td>
+            <td>{{ consult.course }}</td>
+            <td>{{ consult.mother }}</td>
+            <td>{{ consult.father }}</td>
+            <td>{{ consult.email }}</td>
+            <td>{{ consult.phone }}</td>
+            <td>
+              <span class="card_options">
+                <a (click)="onUpdate(consult.id)"
+                  ><img
+                    src="../../../assets/icon _edit pencil.svg"
+                    alt="update"
+                /></a>
+                <a (click)="onDelete(consult)"
+                  ><img src="../../../assets/icon _trash.svg" alt="delete"
+                /></a>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <ng-template #loadingNoError>
@@ -57,3 +76,19 @@
     </ng-template>
   </div>
 </div>
+
+<ng-template #deleteModal>
+  <div class="modal-body text-center">
+    <h5>Do you really want to delete?</h5>
+    <p>
+      By clicking delete, this information will be deleted forever and it will
+      not be possible to recover!
+    </p>
+    <button type="button" class="btn btn-danger" (click)="onConfirmDelete()">
+      Yes
+    </button>
+    <button type="button" class="btn btn-default" (click)="onCancelDelete()">
+      No
+    </button>
+  </div>
+</ng-template>

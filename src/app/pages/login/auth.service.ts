@@ -12,6 +12,7 @@ export class AuthService {
   private userAuthenticated: boolean = false
 
   menu = new EventEmitter<boolean>();
+  footer = new EventEmitter<boolean>();
 
   constructor(private router: Router, private alertService: AlertModalService) { }
 
@@ -19,10 +20,12 @@ export class AuthService {
     if(user.name === 'user' && user.password === '123'){
       this.userAuthenticated = true;
       this.menu.emit(true);
+      this.footer.emit(true);
       this.router.navigate(['/']);
     }else{
       this.userAuthenticated = false;
       this.menu.emit(false);
+      this.footer.emit(false);
       this.alertErrorLogin();
     }
   }
@@ -30,6 +33,7 @@ export class AuthService {
   logout(user: User){
     this.userAuthenticated = false
     this.menu.emit(false);
+    this.footer.emit(false);
   }
 
   userIsAuthenticated(){
@@ -37,6 +41,6 @@ export class AuthService {
   }
 
   alertErrorLogin(){
-    this.alertService.alertDanger("Your password or email is wrong", "../../../../assets/exclamation-triangle.svg", "exclamation-triangle")
+    this.alertService.alertDanger("Your password or email is wrong")
   }
 }

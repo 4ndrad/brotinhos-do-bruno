@@ -3,11 +3,9 @@ import { Student } from '../../data/student';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { pipe } from 'rxjs';
-import {tap, delay} from  'rxjs/operators'
+import {tap, delay, take} from  'rxjs/operators'
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ConsultService {
 
   private readonly API = `${environment.API}student`
@@ -22,4 +20,15 @@ export class ConsultService {
       );
   }
 
+  loadById(id: Student){
+    return this.http.get<Student>(`${this.API}/${id}`).pipe(take(1));
+  }
+
+  update(student: Student) {
+    return this.http.put(`${this.API}/${student.id}`, student).pipe(take(1));
+  }
+
+  remove(id){
+    return this.http.delete(`${this.API}/${id}`).pipe(take(1))
+  }
 }
