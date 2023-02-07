@@ -7,7 +7,7 @@
       "mother": "blaablabalab",
       "father": "xahbsihaasona",
       "phone": "258258282",
-      "email": "natan@outlook.com"
+      "email": "natan@gmail.com"
     },
     {
       "id": 3,
@@ -35,67 +35,7 @@
       "father": "xahbsihaasona",
       "phone": "258258282",
       "email": "gsuadguagd@gmail.com"
-    },
-    {
-      "id": 6,
-      "student": "Valter Andrade de Lima",
-      "course": "system analysis and development",
-      "mother": "blaablabalab",
-      "father": "xahbsihaasona",
-      "phone": "258258282",
-      "email": "jjjjj@outlook.com"
-    },
-    {
-      "id": 7,
-      "student": "TESTE",
-      "course": "system analysis and development",
-      "mother": "blaablabalab",
-      "father": "xahbsihaasona",
-      "phone": "258258282",
-      "email": "ajsaja@outlook.com"
-    },
-    {
-      "id": 8,
-      "student": "TESTE 2",
-      "course": "system analysis and development",
-      "mother": "blaablabalab",
-      "father": "xahbsihaasona",
-      "phone": "258258282",
-      "email": ""
-    },
-    {
-      "student": "Natan Andrade andrad",
-      "mother": "Natan Andrade andrad",
-      "father": "Natan Andrade andrad",
-      "age": "15",
-      "course": "djdjd",
-      "period": "night",
-      "email": "natanal@primeit.com.br",
-      "phone": "1141333737",
-      "id": 9
-    },
-    {
-      "student": "Natan Andrade andrad",
-      "mother": "Natan Andrade andrad",
-      "father": "Natan Andrade andrad",
-      "age": "15",
-      "course": "djdjd",
-      "period": "night",
-      "email": "natanal@primeit.com.br",
-      "phone": "1141333737",
-      "id": 10
-    },
-    {
-      "student": "Natan Andrade andrad",
-      "mother": "Natan Andrade andrad",
-      "father": "Natan Andrade andrad",
-      "age": "16",
-      "course": "ddddd",
-      "period": "tarde",
-      "email": "natanal@primeit.com.br",
-      "phone": "1141333737",
-      "id": 11
-    },
+    }
     {
       "student": "TESTE02",
       "mother": "Natan Andrade andrad",
