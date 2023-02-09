@@ -11,18 +11,30 @@
           <a
             [routerLink]="['/register']"
             [routerLinkActive]="['activated']"
-            [routerLinkActiveOptions]="{exact:true}">
-          Register</a></li>
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            Register</a
+          >
+        </li>
         <li>
           <a
             [routerLink]="['/consult']"
             [routerLinkActive]="['activated']"
-            [routerLinkActiveOptions]="{exact:true}">
-          Consult</a></li>
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            Consult</a
+          >
+        </li>
       </ul>
     </div>
-    <div>
-      <a href="" [routerLink]="['/login']"  (click)="logout()" class="buttonDefault">logout</a>
+    <div class="logout">
+      <a
+        href=""
+        [routerLink]="['/login']"
+        (click)="logout()"
+        class="buttonDefault"
+        > logout <img src="../../../assets/icon-logout.svg" alt="icon-logout" /></a
+      >
     </div>
   </div>
 </div>
