@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { AuthGuard } from './guards/auth.guard.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
