@@ -57,7 +57,7 @@
   color: #ffff
   font-weight: none
 
-.container_loadingError, .container_loading
+.container_loadingError
   display: flex
 
 .refreshError
@@ -72,19 +72,6 @@
   &:active
     img
       animation: spinner .6s linear infinite;
-
-
-
-@keyframes spinner
-  to
-    transform: rotate(360deg);
-
-.refreshDouble
-  width: 20px;
-  margin-left: 10px;
-  img
-    height: 20px
-    animation: spinner .6s linear infinite;
 
 .tableMarginBttm
   margin-bottom: 0
