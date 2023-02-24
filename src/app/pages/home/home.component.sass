@@ -29,11 +29,9 @@
 
 .card_home
   height: 32.4%
+  margin-bottom: 10px
   border-radius: 10px;
   background-color: white
-
-.card_mb
-  margin-bottom: 10px
 
 .card_contacts
   background-color:#FFEE58
@@ -57,4 +55,64 @@
     border-bottom: 1px solid black
     p
      margin-bottom: 0 !important
+
+.container_loading
+  display: flex;
+  justify-content: center;
+  padding-top: 5.65rem
+  padding-bottom: 9.65rem
+  height: 32.4%
+  margin-bottom: 10px
+  border-radius: 10px;
+  background-color: #E0E0E0
+
+.container_loadingError
+  align-items: center
+  text-align: center
+  padding-top: 5rem
+
+@keyframes spinner
+  to
+    transform: rotate(360deg);
+
+.refreshError
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+
+  img
+    height: 20px
+
+  &:active
+    img
+      animation: spinner .6s linear infinite;
+
+.table-card
+  height: 32.4%
+  margin-bottom: 10px
+
+  table
+    height: 100%
+    border-radius: 10px;
+
+  th
+    padding: 5px  5px  0  5px
+    text-align: center
+    background-color: purple
+    color: white
+
+  td
+    padding: 5px  5px  2px  5px
+    text-align: center
+    background-color: #BDBDBD
+    border: solid #1111119f 1px
+
+.border-radius-top-left
+  border-top-left-radius: 10px
+
+.border-radius-top-right
+  border-top-right-radius: 10px
+
+
 
