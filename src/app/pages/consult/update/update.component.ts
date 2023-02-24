@@ -1,4 +1,4 @@
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { AlertModalService } from "src/app/components/shared/alert-modal/alert-modal.service";
@@ -19,7 +19,8 @@ export class UpdateComponent implements OnInit {
     private service: ConsultService,
     private modal: AlertModalService,
     private location: Location,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -33,7 +34,7 @@ export class UpdateComponent implements OnInit {
         [
           Validators.required,
           Validators.minLength(3),
-          Validators.maxLength(30),
+          Validators.maxLength(40),
         ],
       ],
       mother: [
@@ -41,7 +42,7 @@ export class UpdateComponent implements OnInit {
         [
           Validators.required,
           Validators.minLength(3),
-          Validators.maxLength(30),
+          Validators.maxLength(40),
         ],
       ],
       father: [
@@ -49,7 +50,7 @@ export class UpdateComponent implements OnInit {
         [
           Validators.required,
           Validators.minLength(3),
-          Validators.maxLength(30),
+          Validators.maxLength(40),
         ],
       ],
       age: [
@@ -66,7 +67,7 @@ export class UpdateComponent implements OnInit {
       ],
       period: [
         student.period,
-        [Validators.required, Validators.minLength(5), Validators.maxLength(6)],
+        [Validators.required, Validators.minLength(5), Validators.maxLength(7)],
       ],
       email: [
         student.email,
@@ -110,5 +111,6 @@ export class UpdateComponent implements OnInit {
   onCancel() {
     this.submitted = false;
     this.formUpdate.reset();
+    this.router.navigate(['/consult'])
   }
 }

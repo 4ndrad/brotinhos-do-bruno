@@ -5,17 +5,65 @@
     </div>
   </div>
 
-  <div class="container_card ">
-    <div class="card_home card_mb">TESTE</div>
-    <div class="card_home card_mb">TESTE</div>
+  <div class="container_card">
+    <div class="card_mb table-card">
+      <table
+        *ngIf="consult$ | async as consult; else loadingNoError"
+      >
+        <thead>
+          <tr>
+            <th class="border-radius-top-left">Id</th>
+            <th>Student</th>
+            <th class="border-radius-top-right">Course</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let consult of consult | slice : -4">
+          <tr>
+            <td><b>{{ consult.id }}</b></td>
+            <td>{{ consult.student }}</td>
+            <td>{{ consult.course }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ng-template #loadingNoError>
+        <div
+          class="container_loadingError"
+          *ngIf="error$ | async; else loading"
+        >
+          <p>Error loading. Try again later</p>
+          <button class="refreshError" (click)="onRefresh()">
+            <img src="../../../assets/icon_refresh.png" alt="refresh" />
+          </button>
+        </div>
+        <ng-template #loading>
+          <div class="container_loading">
+            <mat-spinner [diameter]="50"></mat-spinner>
+          </div>
+        </ng-template>
+      </ng-template>
+    </div>
     <div class="card_home card_contacts">
       <h1>Contacts</h1>
       <div class="card_contacts-content">
-        <small>(Ombudsman) <p>+555 (26) 98712327</p></small>
-        <small>(School) <p>+555 (26) 94687360</p></small>
-        <small>(Technical assistance) <p>+555 (26) 75861289</p> </small>
-        <small>(Human Resources) <p>+555 (26) 75861202</p> </small>
+        <small
+          >(Ombudsman)
+          <p>+555 (26) 98712327</p></small
+        >
+        <small
+          >(School)
+          <p>+555 (26) 94687360</p></small
+        >
+        <small
+          >(Technical assistance)
+          <p>+555 (26) 75861289</p>
+        </small>
+        <small
+          >(Human Resources)
+          <p>+555 (26) 75861202</p>
+        </small>
       </div>
     </div>
+    <div class="card_home card_mb">TESTE</div>
   </div>
 </div>
