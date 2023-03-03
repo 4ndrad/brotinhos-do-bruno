@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { RouterModule } from '@angular/router';
 import { MatProgressSpinnerModule } from '@angular/material';
+import { MatTableModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MatProgressSpinnerModule } from '@angular/material';
     ReactiveFormsModule,
     ComponentsModule,
     RouterModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTableModule
   ],
   exports:[
     ConsultComponent,
