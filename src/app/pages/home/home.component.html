@@ -7,9 +7,7 @@
 
   <div class="container_card">
     <div class="card_mb table-card">
-      <table
-        *ngIf="consult$ | async as consult; else loadingNoError"
-      >
+      <table *ngIf="consult$ | async as consult; else loadingNoError">
         <thead>
           <tr>
             <th class="border-radius-top-left">Id</th>
@@ -19,7 +17,9 @@
         </thead>
         <tbody *ngFor="let consult of consult | slice : -4">
           <tr>
-            <td><b>{{ consult.id }}</b></td>
+            <td>
+              <b>{{ consult.id }}</b>
+            </td>
             <td>{{ consult.student }}</td>
             <td>{{ consult.course }}</td>
           </tr>
@@ -64,6 +64,7 @@
         </small>
       </div>
     </div>
-    <div class="card_home card_mb">TESTE</div>
+    <div class="card_home">
+    </div>
   </div>
 </div>

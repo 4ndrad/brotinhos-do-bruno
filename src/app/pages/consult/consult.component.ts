@@ -24,6 +24,8 @@ export class ConsultComponent implements OnInit {
 
   queryField = new FormControl();
 
+  displayedColumns = ['id', 'student', 'course', 'mother', 'father', 'email', 'phone', 'update', 'delete']
+
   constructor(
     private service: ConsultService,
     private router: Router,

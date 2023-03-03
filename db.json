@@ -9,7 +9,7 @@
       "course": "system analysis and development",
       "period": "night",
       "email": "natan@outlook.com",
-      "phone": "nightkjhh"
+      "phone": "879562317"
     },
     {
       "id": 3,
@@ -62,17 +62,6 @@
       "id": 7
     },
     {
-      "student": "Amandinha Brotinho Cardoso",
-      "mother": "Ada",
-      "father": "Bruno",
-      "age": "18",
-      "course": "Data Base",
-      "period": "morning",
-      "email": "amandinha@brotinho.com",
-      "phone": "1515151577",
-      "id": 8
-    },
-    {
       "student": "shbeihwbfibwaiq",
       "mother": "sdfdSFDSfas",
       "father": "dfssssssfdfdfd",
@@ -93,6 +82,17 @@
       "email": "ssssssssssssssssss",
       "phone": "ssssssssss",
       "id": 10
+    },
+    {
+      "student": "Amanda brotoooo",
+      "mother": "shshshsshshshsh",
+      "father": "ooppoppppppppp",
+      "age": "05",
+      "course": "akaakak",
+      "period": "nnnbm",
+      "email": "ujhohowchewo@gaga",
+      "phone": "546897123",
+      "id": 11
     }
   ]
 }
